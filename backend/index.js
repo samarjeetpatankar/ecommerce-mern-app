@@ -1,0 +1,35 @@
+import express from "express";
+import colors from "colors";
+import dotenv from "dotenv";
+import morgan from "morgan";
+import cors from "cors";
+import connectDB from "./config/db.js";
+
+// Configure environment variables
+dotenv.config();
+
+//databse config
+connectDB();
+
+// Create Express app
+const app = express();
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+app.use(morgan("dev"));
+
+// REST API
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to ecommerce app</h1>");
+});
+
+// Define the PORT
+const PORT = process.env.PORT || 8080;
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server Running on ${process.env.DEV_MODE} mode on port ${PORT}`);
+});
+
+

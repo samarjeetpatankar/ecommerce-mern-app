@@ -1,0 +1,21 @@
+# Ignore node_modules directory
+/node_modules
+
+# Ignore environment variables file (if you use .env)
+.env
+
+# Ignore build or distribution folders (if you build your backend)
+/build
+/dist
+
+# Ignore logs and other generated files
+/logs
+/*.log
+
+# Ignore configuration files (if you store sensitive data)
+/config/keys.js
+
+# Ignore OS or editor-specific files
+.DS_Store
+*.swp
+*.swo
