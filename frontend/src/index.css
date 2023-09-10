@@ -17,11 +17,11 @@
   text-transform: uppercase;
   box-shadow: 0 8px 6px -6px gray;
   --webkit-box-shadow: 0 8px 6px -6px gray;
-  border-bottom: solid gray !important;
+  border-bottom: solid rgb(241, 240, 240) !important;
 }
 
 .nav-link {
-  font-weight: 300 !important;
+  font-weight: 700 !important;
 }
 
 .active {
