@@ -18,7 +18,7 @@ router.post("/register", registerController);
 router.post("/login", loginController);
 
 //Forgot Password || POST
-router.post("/forgot-password", forgotPasswordController);
+router.post("/forgot-password", forgotPasswordController); 
 
 //test routes
 router.get("/test", requireSignIn, isAdmin, testController);
@@ -28,4 +28,4 @@ router.get("/user-auth", requireSignIn, (req, res) => {
   res.status(200).send({ ok: true });
 });
 
-export default router;
+export default router; 
