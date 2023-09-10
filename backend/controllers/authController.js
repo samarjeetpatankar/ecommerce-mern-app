@@ -99,6 +99,7 @@ export const loginController = async (req, res) => {
         email: user.email,
         phone: user.phone,
         adddress: user.address,
+        role: user.role,
       },
       token,
     });
@@ -114,7 +115,7 @@ export const loginController = async (req, res) => {
 
 //forgotPasswordController
 
-export const forgotPasswordController = async (req, res) => { 
+export const forgotPasswordController = async (req, res) => {
   try {
     const { email, answer, newPassword } = req.body;
     if (!email) {
@@ -159,4 +160,4 @@ export const testController = (req, res) => {
     console.log(error);
     res.send({ error });
   }
-};
+}; 
