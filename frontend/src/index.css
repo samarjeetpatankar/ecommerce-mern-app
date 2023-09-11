@@ -8,7 +8,7 @@
 
 /* font-family: 'Poppins', sans-serif; */
 /* font-family: 'Playfair Display', serif; */
- 
+
 /* //navbar css */
 .navbar {
   font-family: "Poppins", sans-serif;
@@ -17,11 +17,11 @@
   text-transform: uppercase;
   box-shadow: 0 8px 6px -6px gray;
   --webkit-box-shadow: 0 8px 6px -6px gray;
-  border-bottom: solid rgb(241, 240, 240) !important;
+  border-bottom: solid gray !important;
 }
 
 .nav-link {
-  font-weight: 700 !important;
+  font-weight: 300 !important;
 }
 
 .active {
@@ -33,21 +33,6 @@
   font-family: "roboto", sans-serif;
   letter-spacing: 3px;
 }
-
-.search-form {
-  margin-right: 10px;
-  margin-top: 4px;
-}
-.search-form input {
-  border: none;
-  border-radius: 0;
-}
-.search-form button {
-  background-color: #000000;
-  border-radius: 0;
-  color: white;
-}
-
 /* =============================
 ==========footer============= */
 
@@ -118,27 +103,4 @@
 .product-link {
   text-decoration: none !important;
   color: black !important;
-}
-
-.cat-btn {
-  padding: 40px 0px;
-  font-size: 24px;
-  text-transform: uppercase;
-}
-.cat-btn:hover {
-  background-color: #434343;
-  color: white;
-}
-/* ================
-====dashboard
-=================== */
-
-.dashboard {
-  margin-top: 100px !important;
-}
-
-.dashboard-menu h4 {
-  background-color: #434343 !important;
-  color: white;
-  padding: 20px 0px;
 }
