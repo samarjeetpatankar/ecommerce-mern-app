@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./context/auth";
 import { SearchProvider } from "./context/search";
 import { CartProvider } from "./context/cart";
+import { ChakraProvider } from "@chakra-ui/react";
 import "antd/dist/reset.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -14,9 +15,11 @@ root.render(
   <AuthProvider>
     <SearchProvider>
       <CartProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
+        <ChakraProvider> 
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </ChakraProvider>
       </CartProvider>
     </SearchProvider>
   </AuthProvider>
