@@ -112,32 +112,51 @@ const HomePage = () => {
   return (
     <Layout title={"ALl Products - Best offers "}>
       {/* banner image */}
-      <Carousel showThumbs={false} showStatus={false} autoPlay infiniteLoop>
-        <div>
-          <img
-            src="/images/banner.jpg"
-            className="banner-img"
-            alt="bannerimage"
-            width={"100%"}
-          />
-        </div>
-        <div>
-          <img
-            src="/images/banner.jpg"
-            className="banner-img"
-            alt="bannerimage"
-            width={"100%"}
-          />
-        </div>
-        <div>
-          <img
-            src="/images/banner.jpg"
-            className="banner-img"
-            alt="bannerimage"
-            width={"100%"}
-          />
-        </div>
-      </Carousel>
+      <div className="carousel-container">
+        <Carousel
+          showThumbs={false}
+          showStatus={false}
+          autoPlay
+          infiniteLoop
+          interval={2000}
+        >
+          <div>
+            <img
+              src="/images/banner1.jpg"
+              className="banner-img"
+              alt="bannerimage"
+            />
+          </div>
+          <div>
+            <img
+              src="/images/banner2.jpg"
+              className="banner-img"
+              alt="bannerimage"
+            />
+          </div>
+          <div>
+            <img
+              src="/images/banner3.jpg"
+              className="banner-img"
+              alt="bannerimage"
+            />
+          </div>
+          <div>
+            <img
+              src="/images/banner4.jpg"
+              className="banner-img"
+              alt="bannerimage"
+            />
+          </div>
+          <div>
+            <img
+              src="/images/banner5.jpg"
+              className="banner-img"
+              alt="bannerimage"
+            />
+          </div>
+        </Carousel>
+      </div>
 
       {/* banner image */}
       <div className="container-fluid row mt-3 home-page">

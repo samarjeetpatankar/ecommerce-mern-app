@@ -1,14 +1,12 @@
-.banner-img {
-  margin-top: 23px;
-}
 
 .carousel-container {
-  margin-top: 200px; /* Adjust the margin-top value as needed */
+  max-width: 100%;
 }
 
-/* Make the Carousel responsive by setting max-width */
-.carousel {
+.banner-img {
+  margin-top: 66px;
   max-width: 100%;
+  height: auto;
 }
 
 .home-page h1 {
@@ -87,4 +85,12 @@ filters
   color: green;
   font-weight: bold;
   font-size: 20px !important;
+}
+
+@media (max-width: 768px) {
+  .banner-img {
+    margin-top: 66px;
+    max-width: 100%;
+    height: auto;
+  }
 }
