@@ -1,5 +1,14 @@
 .banner-img {
-  margin-top: 60px;
+  margin-top: 23px;
+}
+
+.carousel-container {
+  margin-top: 200px; /* Adjust the margin-top value as needed */
+}
+
+/* Make the Carousel responsive by setting max-width */
+.carousel {
+  max-width: 100%;
 }
 
 .home-page h1 {
