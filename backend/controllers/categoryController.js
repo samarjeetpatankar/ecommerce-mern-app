@@ -9,7 +9,7 @@ export const createCategoryController = async (req, res) => {
     const existingCategory = await categoryModel.findOne({ name });
     if (existingCategory) {
       return res.status(200).send({
-        success: true,
+        success: false,
         message: "Category Already Exisits",
       });
     }
@@ -113,4 +113,3 @@ export const deleteCategoryCOntroller = async (req, res) => {
     });
   }
 }; 
-

@@ -41,4 +41,4 @@ router.delete(
   deleteCategoryCOntroller
 );
 
-export default router;
+export default router; 
