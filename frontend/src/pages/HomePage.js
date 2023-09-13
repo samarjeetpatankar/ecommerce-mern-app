@@ -200,7 +200,7 @@ const HomePage = () => {
                 <img
                   src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top"
-                  alt={p.name}
+                  alt={p.name} 
                 />
                 <div className="card-body">
                   <div className="card-name-price">
