@@ -7,6 +7,9 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import Layout from "./../components/Layout/Layout";
 import { AiOutlineReload } from "react-icons/ai";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import "../styles/Homepage.css";
 
 const HomePage = () => {
@@ -23,7 +26,7 @@ const HomePage = () => {
   //get all cat
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("/api/v1/category/get-category");
+      const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/category/get-category`);
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -40,7 +43,7 @@ const HomePage = () => {
   const getAllProducts = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
+      const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/product/product-list/${page}`);
       setLoading(false);
       setProducts(data.products);
     } catch (error) {
@@ -52,7 +55,7 @@ const HomePage = () => {
   //getTOtal COunt
   const getTotal = async () => {
     try {
-      const { data } = await axios.get("/api/v1/product/product-count");
+      const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/product/product-count`);
       setTotal(data?.total);
     } catch (error) {
       console.log(error);
@@ -67,7 +70,7 @@ const HomePage = () => {
   const loadMore = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
+      const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/product/product-list/${page}`);
       setLoading(false);
       setProducts([...products, ...data?.products]);
     } catch (error) {
@@ -97,7 +100,7 @@ const HomePage = () => {
   //get filterd product
   const filterProduct = async () => {
     try {
-      const { data } = await axios.post("/api/v1/product/product-filters", {
+      const { data } = await axios.post(`${process.env.REACT_APP_API}/api/v1/product/product-filters`, {
         checked,
         radio,
       });
@@ -109,12 +112,52 @@ const HomePage = () => {
   return (
     <Layout title={"All Products - Best offers "}>
       {/* banner image */}
-      <img
-        src="/images/banner1.jpg"
-        className="banner-img"
-        alt="bannerimage"
-        width={"100%"}
-      />
+      <div className="carousel-container">
+        <Carousel
+          showThumbs={false}
+          showStatus={false}
+          autoPlay
+          infiniteLoop
+          interval={2000}
+        >
+          <div>
+            <img
+              src="/images/banner1.jpg"
+              className="banner-img"
+              alt="bannerimage"
+            />
+          </div>
+          <div>
+            <img
+              src="/images/banner2.jpg"
+              className="banner-img"
+              alt="bannerimage"
+            />
+          </div>
+          <div>
+            <img
+              src="/images/banner3.jpg"
+              className="banner-img"
+              alt="bannerimage"
+            />
+          </div>
+          <div>
+            <img
+              src="/images/banner4.jpg"
+              className="banner-img"
+              alt="bannerimage"
+            />
+          </div>
+          <div>
+            <img
+              src="/images/banner5.jpg"
+              className="banner-img"
+              alt="bannerimage"
+            />
+          </div>
+        </Carousel>
+      </div>
+
       {/* banner image */}
       <div className="container-fluid row mt-3 home-page">
         <div className="col-md-3 filters">
