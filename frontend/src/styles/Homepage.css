@@ -1,12 +1,5 @@
-
-.carousel-container {
-  max-width: 100%;
-}
-
 .banner-img {
-  margin-top: 66px;
-  max-width: 100%;
-  height: auto;
+  margin-top: 60px;
 }
 
 .home-page h1 {
@@ -85,12 +78,4 @@ filters
   color: green;
   font-weight: bold;
   font-size: 20px !important;
-}
-
-@media (max-width: 768px) {
-  .banner-img {
-    margin-top: 66px;
-    max-width: 100%;
-    height: auto;
-  }
 }
