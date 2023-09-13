@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# ecommerce-mern-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a ecommerce-mern-app created mern stack app created using the react express mongoddb databse and bootsrap library
 
-## Available Scripts
+feature sof this ares
 
-In the project directory, you can run:
+after going into the website user can see all the products listed
 
-### `npm start`
+user can filter product by category
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+user can filter product by price
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+user can reset filter
 
-### `npm test`
+user can search pruducts by search bar
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+also in the navabr user can see all the categories by clicking on the categories
 
-### `npm run build`
+after clicking on products more details user can go to the product detail page where user can see Name Description Price and Category and also in the bottom user can see the Similar Products of that products
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+if the user have to buy the product he have to click on the add to cart button after that he can go to the cart section if he have to buy that product he have to login first before login he have to register himself first
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+in register we have the fillds like name email passowrd phoneno and address 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+after registering he can then login to the website after loging in the cart section he get two options to update the address if and make payment 
 
-### `npm run eject`
+one he enters the all the details he will be redirected to the users dashboard where he can see all his orders
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+after user makes his order the by admin side on the admin dashboard admin can decide the status of the order like not process processing shipping deleivered and cancel
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+also only admin can created products upadte products and delete products 
+also he can see on his dashboard  all his products
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+also only admin can created category upadte category and delete category 
+also he can see on his dashboard all his category
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
