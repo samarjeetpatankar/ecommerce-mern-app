@@ -35,3 +35,5 @@ also only admin can created category upadte category and delete category
 also he can see on his dashboard all his category
 
 
+make this a full functional github readem file
+also fix grammer and add more content in it
