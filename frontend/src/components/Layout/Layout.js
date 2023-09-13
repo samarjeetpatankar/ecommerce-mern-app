@@ -32,4 +32,3 @@ Layout.defaultProps = {
 };
 
 export default Layout;
-

@@ -55,13 +55,13 @@ const Header = () => {
                   Categories
                 </Link>
                 <ul className="dropdown-menu">
-                  <li key="all-categories">
-                    <Link className="dropdown-item" to="/categories">
+                  <li>
+                    <Link className="dropdown-item" to={"/categories"}>
                       All Categories
                     </Link>
                   </li>
                   {categories?.map((c) => (
-                    <li key={c._id}>
+                    <li>
                       <Link
                         className="dropdown-item"
                         to={`/category/${c.slug}`}
