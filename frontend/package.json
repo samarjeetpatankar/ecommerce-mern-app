@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "https://mern-api-w25l.onrender.com/",
+  "proxy": "https://mern-api-j6zi.onrender.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
