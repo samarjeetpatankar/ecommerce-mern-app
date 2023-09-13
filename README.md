@@ -56,14 +56,6 @@
 
 These features collectively create an enhanced shopping experience for both users and administrators, making our Ecommerce MERN App a robust and user-friendly platform for online retail.
 
-## Usage
-
-1. Clone this repository.
-2. Install dependencies using `npm install` in both the client and server directories.
-3. Configure the MongoDB connection in the server directory.
-4. Start the server using `npm start` in the server directory.
-5. Start the client using `npm start` in the client directory.
-
 ## Contributing
 
 We welcome contributions from the community! If you'd like to improve this project, please follow these steps:
