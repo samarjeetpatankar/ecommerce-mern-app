@@ -36,4 +36,4 @@ also he can see on his dashboard all his category
 
 
 make this a full functional github readem file
-also fix grammer and add more content in it
+also fix grammer and add more content in it 
