@@ -11,6 +11,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../styles/Homepage.css";
 import SubHeader from "../SubHeader/SubHeader";
+import CarouselTop from "../SubHeader/CarouselTop";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -125,6 +126,7 @@ const HomePage = () => {
     <Layout title={"All Products - Best offers "}>
       <SubHeader />
 
+      <CarouselTop />
       <div className="carousel-container">
         <Carousel
           showThumbs={false}
