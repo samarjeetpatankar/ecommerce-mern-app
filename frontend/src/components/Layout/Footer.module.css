@@ -1,0 +1,66 @@
+/* Footer styles */
+.footer {
+    font-size: 16px;
+    color: #ffffff;
+    background: #172337;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .topSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+    width: 100%;
+    padding: 1em 4em 1em 4em;
+  }
+  .bottomSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .linkSection {
+    /* width: 16%; */
+    padding: 1em;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .card {
+    font-size: 25px;
+  }
+  .bottomSection p {
+    font-size: 15px;
+  }
+  .icon {
+    color: yellow;
+  }
+  .spanText {
+    color: #878787;
+  }
+  .ancorLink {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .text {
+    display: block;
+    line-height: 20px;
+    margin-top: 0.9em;
+  }
+  .verticleLine {
+    border: 1px groove #878787;
+    border-radius: 0.1px;
+    height: 160px;
+  }
+  .horizonLine {
+    border: 1px groove #878787;
+    border-radius: 0.1px;
+  }
+  
+  @media screen and (max-width:998px) {
+    .verticleLine {
+      display: none;
+    }
+  }
+  

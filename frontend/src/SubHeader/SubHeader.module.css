@@ -1,0 +1,63 @@
+/* Sub Header Styles */
+.subHeaderContainer {
+  display: flex;
+  justify-content: space-evenly;
+  color: black;
+  padding: 10px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #ffffff;
+  height: max-content;
+}
+.categoryImage {
+  width: 100px;
+  height: 100px;
+}
+.categoryName {
+  font-size: 80px; 
+  font-weight: bold;
+}
+.categoryLink {
+  text-decoration: none;
+  text-align: center;
+  color: #212121;
+}
+.categoryLink:hover {
+  color: #2455f4;
+}
+.categoryLink p {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Roboto, Arial, sans-serif;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+
+@media (max-width: 768px) {
+  .subHeaderContainer {
+    flex-direction: column; /* Stack items vertically */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Distribute space evenly between two columns */
+    margin-top: 50px; /* Reduce top margin */
+    height: max-content;
+  }
+
+  .categoryImage {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+  }
+
+  .categoryLink p {
+    font-size: 23px;
+  font-weight: 700;
+  }
+
+  
+  /* Add any additional styles for smaller screens here */
+}
