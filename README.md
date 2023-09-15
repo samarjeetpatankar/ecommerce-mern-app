@@ -3,7 +3,7 @@
 Welcome to our E-Commerce application! This guide will help you make the most of your shopping experience.
 
 ## Table of Contents
-1. [Accessing the Application](#accessing-the-application)
+1. [Accessing the Application](https://ecommerce-mern-app-theta.vercel.app/)
 2. [Homepage](#homepage)
 3. [Product Categories](#product-categories)
 4. [Product Listings](#product-listings)
