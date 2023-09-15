@@ -15,6 +15,48 @@ const CategoryProduct = () => {
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [sortOrder, setSortOrder] = useState("asc"); // "asc" for low to high, "desc" for high to low
+
+  useEffect(() => {
+    if (params?.slug) getProductsByCat();
+  }, [params?.slug]);
+
+  const getProductsByCat = async () => {
+    try {
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API}/api/v1/product/product-category/${params.slug}`
+      );
+      setProducts(data?.products);
+      setCategory(data?.category);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // Function to sort products by price
+  const sortProductsByPrice = (order) => {
+    const sortedProducts = [...products];
+    sortedProducts.sort((a, b) => {
+      if (order === "asc") {
+        return a.price - b.price;
+      } else {
+        return b.price - a.price;
+      }
+    });
+    setProducts(sortedProducts);
+  };
+
+  useEffect(() => {
+    sortProductsByPrice(sortOrder);
+  }, [sortOrder]);
+
+  useEffect(() => {
+    if (params?.slug) getProductsByCat();
+  }, [params?.slug]);
+
+  const handleSortChange = (e) => {
+    setSortOrder(e.target.value);
+  };
 
   useEffect(() => {
     if (params?.slug) getPrductsByCat();
@@ -33,7 +75,22 @@ const CategoryProduct = () => {
 
   return (
     <Layout>
-      <div className="container mt-3 category">
+      <div className="container mt-3 category ">
+        <div className="text-left mb-3">
+          <label htmlFor="sortOrder" className="category-sortOrder">
+            Sort by:
+          </label>
+          <select
+            id="sortOrder"
+            className="category-form-select"
+            value={sortOrder}
+            onChange={handleSortChange}
+          >
+            <option value="default">Default</option>
+            <option value="asc">Price Low to High</option>
+            <option value="desc">Price High to Low</option>
+          </select>
+        </div>
         <h4 className="text-center">Category - {category?.name}</h4>
         <h6 className="text-center">{products?.length} result found </h6>
         <div className="row">
