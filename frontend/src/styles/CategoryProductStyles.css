@@ -1,6 +1,32 @@
+.text-left {
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.category-sortOrder {
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.category-form-select {
+  font-size: larger;
+  width: 300px;
+  border: 1px solid #333;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.category-form-select:hover,
+.category-form-select:focus {
+  border-color: #007bff;
+}
+
 .category {
   flex-wrap: wrap;
-  margin-top: 80px !important;
+  margin-top: 80px !important; 
 }
 .category .card {
   background-color: rgba(128, 128, 128, 0.097);
