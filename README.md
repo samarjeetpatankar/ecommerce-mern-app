@@ -107,17 +107,3 @@ Enjoy your shopping experience on our E-Commerce application!
 
 These features collectively create an enhanced shopping experience for both users and administrators, making our Ecommerce MERN App a robust and user-friendly platform for online retail.
 
-## Contributing
-
-We welcome contributions from the community! If you'd like to improve this project, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and test thoroughly.
-4. Create a pull request with a clear description of your changes.
-
-## Acknowledgments
-
-We would like to thank the open-source community for their contributions and support.
-
-Feel free to reach out if you have any questions or need further assistance.
