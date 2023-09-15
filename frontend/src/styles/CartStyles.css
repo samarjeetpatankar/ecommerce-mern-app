@@ -27,3 +27,8 @@
   text-align: center;
   /* margin-top: -140px !important; */
 }
+
+.cart-page .card img {
+  max-height: 130px; /* Adjust the value as needed */
+  width: auto; /* Maintain aspect ratio */
+}
