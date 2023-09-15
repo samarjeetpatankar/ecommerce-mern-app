@@ -1,3 +1,54 @@
+# E-Commerce Application Guide
+
+Welcome to our E-Commerce application! This guide will help you make the most of your shopping experience.
+
+## Table of Contents
+1. [Accessing the Application](#accessing-the-application)
+2. [Homepage](#homepage)
+3. [Product Categories](#product-categories)
+4. [Product Listings](#product-listings)
+5. [Product Details](#product-details)
+6. [Shopping Cart](#shopping-cart)
+7. [Making a Purchase](#making-a-purchase)
+8. [Admin Panel](#admin-panel)
+
+## Accessing the Application
+To start shopping, click [here](https://ecommerce-mern-app-theta.vercel.app/) or access it through the About section. Please be patient as the server is hosted on a third-party application and may take some time to load.
+
+## Homepage
+Upon loading, you'll find the homepage with a navigation bar that includes the application name, a search bar, register and login options, and the cart section. Additionally, you'll see categories related to the products available.
+
+## Product Categories
+You can explore different product categories on the homepage. Click on a category to view all the products within that category.
+
+## Product Listings
+Within a category, you can sort products by price or date. This helps you find products that match your preferences.
+
+## Product Details
+When you select a product, you'll be directed to the product detail page. Here, you can find all the information about that product. At the bottom of the page, you'll also discover similar products.
+
+## Shopping Cart
+If you wish to purchase a product, click the "Add to Cart" button. You'll receive a toast notification confirming that the item has been added to your cart. To view your cart and proceed with payment, head to the cart section.
+
+## Making a Purchase
+In the cart section, you'll see all the items you've added. If you're not logged in, you'll be prompted to do so. After logging in, you can proceed with payment. Fill in your card details, and once successful, you'll be redirected to your dashboard where you can view your orders and their statuses.
+
+## Admin Panel
+If you're an admin, you can access the admin panel using the following credentials:
+- Email: admin@gmail.com
+- Password: admin@123
+
+In the admin dashboard, you'll have the following options:
+
+1. **Create Category**: Create new product categories.
+2. **Create Product**: Add new products to the application.
+3. **Orders**: Monitor all orders and manage their statuses.
+
+Please note that changes made in the admin panel will also reflect in the user's order history.
+
+Enjoy your shopping experience on our E-Commerce application!
+
+
 ## Features
 
 ### Product Listing
