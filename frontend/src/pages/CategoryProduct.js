@@ -15,7 +15,17 @@ const CategoryProduct = () => {
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
-  const [sortOrder, setSortOrder] = useState("asc"); // "asc" for low to high, "desc" for high to low
+  const [sortOrder, setSortOrder] = useState("default");
+
+  const [sortBy, setSortBy] = useState("default");
+
+  useEffect(() => {
+    sortProductsByPrice(sortOrder);
+  }, [sortOrder]);
+
+  useEffect(() => {
+    sortProductsByDate(sortBy);
+  }, [sortBy]);
 
   useEffect(() => {
     if (params?.slug) getProductsByCat();
@@ -44,6 +54,22 @@ const CategoryProduct = () => {
       }
     });
     setProducts(sortedProducts);
+  };
+
+  const sortProductsByDate = (sortBy) => {
+    const sortedProducts = [...products];
+    if (sortBy === "recent") {
+      sortedProducts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    } else if (sortBy === "first") {
+      sortedProducts.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+    }
+    setProducts(sortedProducts);
+  };
+
+ 
+
+  const handleSortByChange = (e) => {
+    setSortBy(e.target.value);
   };
 
   useEffect(() => {
@@ -76,21 +102,38 @@ const CategoryProduct = () => {
   return (
     <Layout>
       <div className="container mt-3 category ">
-        <div className="text-left mb-3">
-          <label htmlFor="sortOrder" className="category-sortOrder">
-            Sort by:
-          </label>
-          <select
-            id="sortOrder"
-            className="category-form-select"
-            value={sortOrder}
-            onChange={handleSortChange}
-          >
-            <option value="default">Default</option>
-            <option value="asc">Price Low to High</option>
-            <option value="desc">Price High to Low</option>
-          </select>
-        </div>
+      <div className="text-left mb-3">
+  <label htmlFor="sortOrder" className="category-sortOrder">
+    Sort by Price:
+  </label>
+  <select
+    id="sortOrder"
+    className="category-form-select"
+    value={sortOrder}
+    onChange={handleSortChange}
+  >
+    <option value="default">Default</option>
+    <option value="asc">Price Low to High</option>
+    <option value="desc">Price High to Low</option>
+  </select>
+  
+  <label htmlFor="sortBy" className="category-sortOrder">
+    Sort by Date:
+  </label>
+  <select
+    id="sortBy"
+    className="category-form-select"
+    value={sortBy}
+    onChange={handleSortByChange}
+  >
+    <option value="default">Default</option>
+    <option value="recent">Recently Added</option>
+    <option value="first">First Added</option>
+  </select>
+</div>
+
+
+
         <h4 className="text-center">Category - {category?.name}</h4>
         <h6 className="text-center">{products?.length} result found </h6>
         <div className="row">
