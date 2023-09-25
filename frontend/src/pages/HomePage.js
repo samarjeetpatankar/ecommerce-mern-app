@@ -232,13 +232,13 @@ const HomePage = () => {
                   </p>
                   <div className="card-name-price">
                     <button
-                      className="btn btn-info ms-1"
+                      className="btn btn-primary ms-1" // Change button color to primary
                       onClick={() => navigate(`/product/${p.slug}`)}
                     >
                       More Details
                     </button>
                     <button
-                      className="btn btn-dark ms-1"
+                      className="btn btn-success ms-1" // Change button color to success
                       onClick={() => {
                         setCart([...cart, p]);
                         localStorage.setItem(
