@@ -175,30 +175,61 @@ const HomePage = () => {
 
       {/* banner image */}
       <div className="container-fluid row mt-3 home-page">
-        <div className="col-md-3 filters">
+        <div className="col-md-2 filters">
           <h4 className="text-center">Filter By Category</h4>
           <div className="d-flex flex-column">
             {categories?.map((c) => (
-              <Checkbox
-                key={c._id}
-                onChange={(e) => handleFilter(e.target.checked, c._id)}
-              >
-                {c.name}
-              </Checkbox>
+              <div key={c._id} className="form-check">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  onChange={(e) => handleFilter(e.target.checked, c._id)}
+                  id={`category-${c._id}`}
+                />
+                <label
+                  className="form-check-label"
+                  htmlFor={`category-${c._id}`}
+                >
+                  {c.name}
+                </label>
+              </div>
             ))}
           </div>
-          {/* price filter */}
+          {/* Price filter */}
           <h4 className="text-center mt-4">Filter By Price</h4>
           <div className="d-flex flex-column">
-            <Radio.Group onChange={(e) => setRadio(e.target.value)}>
-              {Prices?.map((p) => (
-                <div key={p._id}>
-                  <Radio value={p.array}>{p.name}</Radio>
-                </div>
-              ))}
-            </Radio.Group>
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="priceFilter"
+                value=""
+                onChange={(e) => setRadio(e.target.value)}
+                id="price-all"
+                checked={radio === ""}
+              />
+              <label className="form-check-label" htmlFor="price-all">
+                All
+              </label>
+            </div>
+            {Prices?.map((p) => (
+              <div key={p._id} className="form-check">
+                <input
+                  className="form-check-input"
+                  type="radio"
+                  name="priceFilter"
+                  value={p.array}
+                  onChange={(e) => setRadio(e.target.value)}
+                  id={`price-${p._id}`}
+                  checked={radio === p.array}
+                />
+                <label className="form-check-label" htmlFor={`price-${p._id}`}>
+                  {p.name}
+                </label>
+              </div>
+            ))}
           </div>
-          <div className="d-flex flex-column">
+          <div className="d-flex flex-column mt-4">
             <button
               className="btn btn-danger"
               onClick={() => window.location.reload()}
